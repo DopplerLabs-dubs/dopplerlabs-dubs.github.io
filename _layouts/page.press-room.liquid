@@ -1,0 +1,230 @@
+{% include header.liquid %}
+<div id="page-press-room" class="page pad-top">
+  <div id="masthead-press">
+
+    <div class="container">
+      <div class="row">
+        <div class="center-block text-center col-xs-12">
+          <img class="press-icon" src="/assets/press-icon.png" />
+          <h1 class="press-title">Press <b>Room</b></h1>
+
+          <p class="center-block">
+          Need some material to write a story?
+          <br/>
+          You've come to the right place. Scroll down and find all the content you're looking for.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- subnav -->
+  <ul class="subnav">
+    <li>
+      <a href="#why-dubs">Why Dubs?</a>
+    </li>
+    <li>
+      <a href="#what-are-dubs">What are Dubs?</a>
+    </li>
+    <li>
+      <a href="#assets">Assets</a>
+    </li>
+    <li>
+      <a href="#doppler">Doppler Labs</a>
+    </li>
+
+  </ul>
+  <!-- end subnav -->
+
+
+  <!-- homepage strip -->
+  <div class="homepage-strip strip-1 text-center">
+    <a class="anchor" id="why-dubs"></a>
+    <div class="container">
+      <div class="col-xs-12">
+        <h2>Why Dubs?</h2>
+        <p>
+          We are currently subjected to more noise in our daily lives than ever before.  Noise pollution has doubled in the last 10 years and Noise Induced Hearing Loss (NIHL) has become the third most common medical condition in America.  More than 48 million Americans experience hearing loss, and 6 out of 10 of us are below retirement age.
+        </p>
+        <p>
+          The <b>DUBS</b> help to protect against hearing loss by tuning the world to a responsible level, without muting sounds or removing you from your environment.
+        </p>
+      </div>
+    </div><!-- end container -->
+  </div><!-- end homepage strip -->
+
+
+  <!-- homepage strip -->
+  <div class="homepage-strip text-center tint">
+    <a class="anchor" id="what-are-dubs"></a>
+    <div class="container">
+      <div class="col-xs-12">
+        <h2>What are the Dubs?</h2>
+        <p>
+          <b>DUBS Acoustic Filters</b> are the first advanced tech ear plugs using Dynamic Attenuation to deliver optimal hearing protection while preserving sound fidelity. The <b>DUBS</b> are a stylish and comfortable hearable ideal for any loud environment: from a concert to an airplane to a stadium to everyday city noise.
+        </p>
+        <div class="pad-some">
+          <img src="/assets/getdubs-case-tint.jpg" />
+        </div>
+      </div>
+    </div><!-- end container -->
+  </div><!-- end homepage strip -->
+
+  <!--  -->
+  <div class="blue-strip text-center">
+    <div class="container">
+      <div class="col-xs-6 col-sm-2 col-sm-offset-3">
+        www.getdubs.com
+      </div>
+      <div class="col-xs-6 col-sm-2 col-sm-offset-2">
+        #wearDUBS
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- download strip -->
+  <div class="download-strip text-center assets">
+    <a class="anchor" id="assets"></a>
+    <div class="container">
+
+      {% assign color_1 = 'grey' %}
+      {% assign color_2 = 'green' %}
+      {% include press-sku-assets.liquid %}
+
+      <div class="hidden-xs hidden-sm row" style="padding-bottom:40px;"></div>
+
+      {% assign color_1 = 'blue' %}
+      {% assign color_2 = 'pink' %}
+      {% include press-sku-assets.liquid %}
+
+
+
+    </div>
+
+  </div><!-- end download strip -->
+
+
+  <!-- DetailDetail Carousel -->
+  <div class="homepage-strip text-center tint">
+    <div class="container">
+      <div class="col-lg-12 col-xs-12 inner text-center">
+
+            <div class="row owl-carousel three-across download-carousel">
+              {% for i in (1..6) %}
+                {% capture image_name_base %}Detail{{i}}{% endcapture %}
+                {% capture image_name %}{{image_name_base}}.jpg{% endcapture %}
+                {% capture image_name_low %}{{image_name_base}}-lowRes.jpg{% endcapture %}
+                {% capture image_name_hi %}{{image_name_base}}-hiRes.jpg{% endcapture %}
+                <div class="item-inner">
+                  <div class="download" style="background: url('/assets/{{ image_name }}')">
+                    <div class="layer">
+                      <a target="_blank" class="caps" href="/assets/{{ image_name_hi }}">
+                        <i class="fa fa-arrow-down"></i>
+                        <span>High Res</span>
+                      </a>
+                      <a target="_blank" class="caps" href="/assets/{{ image_name_low }}">
+                        <i class="fa fa-arrow-down"></i>
+                        <span>Low Res</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div><!-- end carousel row -->
+
+      </div>
+    </div><!-- end container -->
+  </div>
+  <!-- end carousel -->
+
+
+
+  <!-- DUBS LOGO download strip -->
+  <div class="blue-strip download-strip text-center">
+    <div class="container">
+      <img class="image" src="/assets/DUBS-White.png" />
+
+      <a class="caps" target="_blank" download="DUBS-White" href="/assets/DUBS-White.png">
+        <i class="fa fa-arrow-down"></i>
+        <span>White logo</span>
+      </a>
+      <a class="caps" target="_blank" download="DUBS-Grey"  href="/assets/DUBS-Grey.png">
+        <i class="fa fa-arrow-down"></i>
+        <span>Grey logo</span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Lifestyle Carousel -->
+  <div class="homepage-strip text-center">
+    <div class="container">
+      <div class="col-lg-12 col-xs-12 inner text-center">
+
+            <div class="row owl-carousel three-across download-carousel">
+              {% for i in (1..6) %}
+                {% capture image_name_base %}Lifestyle{{i}}{% endcapture %}
+                {% capture image_name %}{{image_name_base}}.jpg{% endcapture %}
+                {% capture image_name_low %}{{image_name_base}}-lowRes.jpg{% endcapture %}
+                {% capture image_name_hi %}{{image_name_base}}-hiRes.jpg{% endcapture %}
+                <div class="item-inner">
+                  <div class="download" style="background: url('/assets/{{ image_name }}')">
+                    <div class="layer">
+                      <a target="_blank" class="caps" href="/assets/{{ image_name_hi }}">
+                        <i class="fa fa-arrow-down"></i>
+                        <span>High Res</span>
+                      </a>
+                      <a target="_blank" class="caps" href="/assets/{{ image_name_low }}">
+                        <i class="fa fa-arrow-down"></i>
+                        <span>Low Res</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div><!-- end carousel row -->
+
+      </div>
+    </div><!-- end container -->
+  </div>
+  <!-- end carousel -->
+
+
+
+ <!-- homepage strip -->
+  <div class="homepage-strip text-center tint">
+    <a class="anchor" id="doppler"></a>
+    <div class="container">
+      <div class="col-xs-12">
+        <h2>Our Company: Doppler Labs</h2>
+        <p>
+          Doppler Labs is a wearable technology company with a primary focus on hearables. We are a team of creatives, engineers, technologists and business leaders who are dedicated to enhancing all aspects of the listening experience.
+        </p>
+      </div>
+    </div><!-- end container -->
+  </div><!-- end homepage strip -->
+
+
+  <!-- Doppler LOGO download strip -->
+  <div class="blue-strip download-strip text-center">
+    <div class="container">
+      <img class="image" src="/assets/Doppler-White.png" />
+
+      <a class="caps" target="_blank" download="Doppler-White" href="/assets/Doppler-White.png">
+        <i class="fa fa-arrow-down"></i>
+        <span>White logo</span>
+      </a>
+      <a class="caps" target="_blank" download="Doppler-Grey" href="/assets/Doppler-Grey.png">
+        <i class="fa fa-arrow-down"></i>
+        <span>Grey logo</span>
+      </a>
+    </div>
+  </div>
+
+</div> <!-- end #page -->
+{% include footer.liquid %}

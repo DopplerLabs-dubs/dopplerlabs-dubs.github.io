@@ -1,0 +1,40 @@
+{% capture image_1 %}getdubs-case-{{color_1}}.jpg{% endcapture %}
+{% capture image_1_hi %}getdubs-case-{{color_1}}@2x.jpg{% endcapture %}
+
+{% capture image_2 %}getdubs-case-{{color_2}}.jpg{% endcapture %}
+{% capture image_2_hi %}getdubs-case-{{color_2}}@2x.jpg{% endcapture %}
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-2" style="z-index:2">
+      <div class = "row">
+        <img src="/assets/{{ image_1 }}" />
+      </div>
+      <div class="row">
+        <a target="_blank" class="caps" download="DUBS-SKU-{{color_1}}" href="/assets/{{ image_1_hi }}">
+          <i class="fa fa-arrow-down"></i>
+          <span>High Res</span>
+        </a>
+        <a target="_blank" class="caps" download="DUBS-SKU-{{color_1}}" href="/assets/{{ image_1 }}">
+          <i class="fa fa-arrow-down"></i>
+          <span>Low Res</span>
+        </a>
+      </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 col-lg-4 ">
+      <div class="row">
+        <img src="/assets/{{ image_2 }}" />
+      </div>
+      <div class="row">
+        <a target="_blank" class="caps" download="DUBS-SKU-{{color_2}}" href="/assets/{{ image_2_hi }}">
+          <i class="fa fa-arrow-down"></i>
+          <span>High Res</span>
+        </a>
+        <a target="_blank" class="caps" download="DUBS-SKU-{{color_2}}" href="/assets/{{ image_2 }}">
+          <i class="fa fa-arrow-down"></i>
+          <span>Low Res</span>
+        </a>
+      </div>
+  </div>
+</div>
